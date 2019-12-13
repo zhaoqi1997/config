@@ -1,5 +1,4 @@
 server:
-  port: 8762
   #    jsp热部署
   servlet:
     jsp:
