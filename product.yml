@@ -1,0 +1,32 @@
+server:
+  #    jsp热部署
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8760/eureka
+spring:
+  application:
+    name: product
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/app?serverTimezone=UTC
+    username: root
+    password: 123456
+mybatis:
+  type-aliases-package: com.zq.entity
+  mapper-locations: classpath:com/zq/mapper/*.xml
+logging:
+  level: 
+    com.zq.dao: debug
+ribbon:
+  ReadTimeOut: 10000
+  ConnectTimeout: 12000
